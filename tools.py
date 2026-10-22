@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """TinyFish 联网检索封装 + 离线桩。对外只暴露 web_search(query, use_web, category)。
 
-要点（复用 demo1/v2_agent.py、sh_news.py 的做法）：
+要点：
   · Windows 上 tinyfish 是 .cmd，免 shell 的 list 调用跑不了，需经 cmd /c；
   · tinyfish 有时在 JSON 后追加一行升级提示 → 用 JSONDecoder().raw_decode 只取第一个 JSON；
   · 超时/无网/无 tinyfish 一律降级为一句说明字符串（不抛异常、不炸图）；
